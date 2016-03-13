@@ -1,0 +1,16 @@
+[
+{
+  "modid": "teastory",
+  "name": "Tea Story",
+  "description": "Tea,a story of leaves.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["LuoXiao_Wings"],
+  "credits": "Made by SLS(SkyLine Studio)",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
