@@ -11,7 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
 
-public class UnactivatedEnchantedBook extends NormalItem
+public class UnactivatedEnchantedBook extends TSItem
 {
 	public UnactivatedEnchantedBook()
     {

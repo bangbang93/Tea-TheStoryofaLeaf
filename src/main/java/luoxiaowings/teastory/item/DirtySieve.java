@@ -6,7 +6,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class DirtySieve extends NormalItem
+public class DirtySieve extends TSItem
 {
 	public DirtySieve()
     {

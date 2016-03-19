@@ -17,15 +17,15 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ItemLoader
 {
-    public static Item tea_leaf = new TeaLeaf("tea_leaf", 64);
-    public static Item dried_tea = new NormalItem("dried_tea", 64);
-    public static Item sieve = new NormalItem("sieve", 64);
-    public static Item brush = new NormalItem("brush", 64);
-    public static Item burnt_tea = new NormalItem("burnt_tea", 64);
-    public static Item wet_tea = new WetTea("wet_tea", 64);
-    public static Item broken_tea = new NormalItem("broken_tea", 64);
-    public static Item matcha = new NormalItem("matcha", 64);
-    public static Item mortar_and_pestle = new NormalItem("mortar_and_pestle", 64);
+    public static Item tea_leaf = new TSItem("tea_leaf", 64);
+    public static Item dried_tea = new TSItem("dried_tea", 64);
+    public static Item sieve = new TSItem("sieve", 64);
+    public static Item brush = new TSItem("brush", 64);
+    public static Item burnt_tea = new TSItem("burnt_tea", 64);
+    public static Item wet_tea = new TSItem("wet_tea", 64);
+    public static Item broken_tea = new TSItem("broken_tea", 64);
+    public static Item matcha = new TSItem("matcha", 64);
+    public static Item mortar_and_pestle = new TSItem("mortar_and_pestle", 64);
     public static Item unactivated_enchanted_book = new UnactivatedEnchantedBook();
     public static Item dirty_sieve =new DirtySieve();
     public static ItemFood hot_water = new HotWater();
