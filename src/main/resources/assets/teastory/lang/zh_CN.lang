@@ -20,15 +20,27 @@ item.burnt_tea.name=焦茶叶
 item.broken_tea.name=碎茶叶
 item.wet_tea.name=湿茶叶
 item.matcha.name=抹茶粉
+item.matcha_leaf.name=抹茶叶
 item.matcha_drink.name=抹茶
+item.black_tea_leaf.name=红茶叶
+item.black_tea.name=红茶
+item.tea_residue.green.name=茶叶渣
+item.tea_residue.black.name=茶叶渣
+item.tea_seeds.name=茶籽
 item.mortar_and_pestle.name=杵臼
-item.unactivated_enchanted_book.name=未激活的附魔书
 
 #Blocks
-tile.dustpan.name=茶筛
-tile.dustpan_full.name=茶筛
-tile.dustpan_dried.name=干茶筛
-tile.dustpan_wet.name=湿茶筛
+tile.teapan.empty.name=茶筛
+tile.teapan.full.name=茶筛-鲜叶
+tile.teapan.dried.name=茶筛-干叶
+tile.teapan.matcha.name=茶筛-抹茶
+tile.teapan.wet.name=茶筛-湿叶
+tile.barrel.empty.name=发酵桶
+tile.barrel.full.name=发酵桶-鲜叶
+tile.barrel.full2.name=发酵桶-揉捻
+tile.barrel.fermentation.name=发酵桶-发酵
+tile.barrel.blacktea.name=发酵桶-红茶
+tile.teaplant.name=茶树
 tile.testblock.name=测试方块
 
 #Achievements
@@ -48,3 +60,9 @@ achievement.teastory.anotherDrink=抹茶，另一种更好的风味
 achievement.teastory.anotherDrink.desc=泡一杯抹茶
 achievement.teastory.warmthOrHarm=温暖？伤害？
 achievement.teastory.warmthOrHarm.desc=在不同的生物群系喝开水试试
+achievement.teastory.blackTea=红茶，英式风味
+achievement.teastory.blackTea.desc=使用发酵桶成功制出红茶
+
+#Info
+teastory.welcome.1=[TS]感谢安装§2§o茶，一片树叶的故事§f，当前模组版本：§61.1.1
+teastory.welcome.2=[TS]访问原帖以获取最新版本及使用说明！本消息可通过配置文件关闭。
