@@ -2,8 +2,8 @@
     "textures": {
         "side": "blocks/planks_oak",
         "top": "blocks/planks_oak",
-        "bottom": "teastory:blocks/dustpan_bottom",
-        "up": "teastory:blocks/dustpan_bottom",
+        "bottom": "teastory:blocks/teapan_bottom",
+        "up": "teastory:blocks/teapan_bottom",
         "particle": "blocks/planks_oak"
     },
     "elements": [

@@ -1,0 +1,63 @@
+{
+    "textures": {
+        "side": "blocks/planks_oak",
+        "top": "blocks/planks_oak",
+        "bottom": "teastory:blocks/teapan_bottom",
+        "up": "teastory:blocks/teapan_full",
+        "particle": "blocks/planks_oak"
+    },
+    "elements": [
+        {
+            "from": [0,0,0],
+            "to": [16,1,16],
+            "faces": {
+                "up": {"texture": "#up"},
+                "down": {"texture": "#bottom", "cullface": down},
+                "west": {"uv": [0,15,16,16], "texture": "#side", "cullface": west},
+                "east": {"texture": "#side", "cullface": east},
+                "north": {"texture": "#side", "cullface": north},
+                "south": {"uv": [0,15,16,16], "texture": "#side", "cullface": south}
+            }
+        },
+        {
+            "from": [0,1,14],
+            "to": [16,6,16],
+            "faces": {
+                "up": {"texture": "#top"},
+                "west": {"texture": "#side", "cullface": west},
+                "east": {"texture": "#side", "cullface": east},
+                "north": {"texture": "#side"},
+                "south": {"texture": "#side", "cullface": south}
+            }
+        },
+        {
+            "from": [0,1,0],
+            "to": [16,6,2],
+            "faces": {
+                "up": {"texture": "#top"},
+                "west": {"texture": "#side", "cullface": west},
+                "east": {"texture": "#side", "cullface": east},
+                "north": {"texture": "#side", "cullface": north},
+                "south": {"texture": "#side"}
+            }
+        },
+        {
+            "from": [14,1,2],
+            "to": [16,6,14],
+            "faces": {
+                "up": {"texture": "#top"},
+                "west": {"texture": "#side"},
+                "east": {"texture": "#side", "cullface": east}
+            }
+        },
+        {
+            "from": [0,1,2],
+            "to": [2,6,14],
+            "faces": {
+                "up": {"texture": "#top"},
+                "west": {"texture": "#side", "cullface": west},
+                "east": {"texture": "#side"}
+            }
+        }
+    ]
+}
