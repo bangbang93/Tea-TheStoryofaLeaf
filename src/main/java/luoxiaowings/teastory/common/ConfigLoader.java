@@ -7,13 +7,16 @@ public class ConfigLoader
 {
 	private static Configuration config;
 	
-	public static int greentea_absorptionTime;
-	public static int greentea_absorptionTier;
-	public static int greentea_hungerTime;
-	public static int greentea_hungerTier;
-	public static int greentea_resistanceTime;
-	public static int greentea_resistanceTier;
+	public static int greentea_Time;
+	public static int greentea_Tier;
+	public static int burntgreentea_Time;
+	public static int burntgreentea_Tier;
+	public static int matcha_Time;
+	public static int matcha_Tier;
+	public static int blacktea_Time;
+	public static int blacktea_Tier;
 	public static int enchantmentLifeDrainId;
+	public static boolean info;
 	
 	public ConfigLoader(FMLPreInitializationEvent event)
 	{
@@ -27,12 +30,11 @@ public class ConfigLoader
 	
 	private static void registerConfig()
 	{
-		greentea_absorptionTime = config.get(Configuration.CATEGORY_GENERAL, "greentea_absorptionTime", 1500).getInt();
-		greentea_absorptionTier = config.get(Configuration.CATEGORY_GENERAL, "greentea_absorptionTier", 1).getInt();
-		greentea_hungerTime = config.get(Configuration.CATEGORY_GENERAL, "greentea_hungerTime", 600).getInt();
-		greentea_hungerTier = config.get(Configuration.CATEGORY_GENERAL, "greentea_hungerTier", 2).getInt();
-		greentea_resistanceTime = config.get(Configuration.CATEGORY_GENERAL, "greentea_resistanceTime", 3000).getInt();
-		greentea_resistanceTier= config.get(Configuration.CATEGORY_GENERAL, "greentea_resistanceTier", 2).getInt();
+		info = config.get(Configuration.CATEGORY_GENERAL, "info", true).getBoolean();
+		greentea_Time = config.get(Configuration.CATEGORY_GENERAL, "greentea_Effect_Time", 2000).getInt();
+		burntgreentea_Time = config.get(Configuration.CATEGORY_GENERAL, "burntgreentea_Effect_Time", 600).getInt();
+		matcha_Time = config.get(Configuration.CATEGORY_GENERAL, "matcha_Effect_Time", 1200).getInt();
+		blacktea_Time = config.get(Configuration.CATEGORY_GENERAL, "blacktea_Effect_Time", 2500).getInt();
 		enchantmentLifeDrainId = config.get(Configuration.CATEGORY_GENERAL, "enchantmentLifeDrainId", 30).getInt();
 	}
 }

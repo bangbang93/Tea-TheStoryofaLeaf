@@ -25,9 +25,9 @@ public class BurntGreenTea extends ItemSoup
     {
         if(!world.isRemote)
         {
-        	entityplayer.addPotionEffect(new PotionEffect(Potion.absorption.id, Math.max(0, ConfigLoader.greentea_absorptionTime)/2, 0)); 
-            entityplayer.addPotionEffect(new PotionEffect(Potion.hunger.id, Math.max(0, ConfigLoader.greentea_hungerTime), 1)); 
-            entityplayer.addPotionEffect(new PotionEffect(Potion.resistance.id, Math.max(0, ConfigLoader.greentea_resistanceTime)/2, 0)); 
+        	entityplayer.addPotionEffect(new PotionEffect(Potion.absorption.id, Math.max(0, ConfigLoader.burntgreentea_Time), 0)); 
+            entityplayer.addPotionEffect(new PotionEffect(Potion.hunger.id, Math.max(0, ConfigLoader.burntgreentea_Time), 1)); 
+            entityplayer.addPotionEffect(new PotionEffect(Potion.resistance.id, Math.max(0, ConfigLoader.burntgreentea_Time), 0)); 
         }
     }
     

@@ -1,6 +1,7 @@
 package luoxiaowings.teastory.item;
 
 import luoxiaowings.teastory.TeaStory;
+import luoxiaowings.teastory.block.BlockLoader;
 import luoxiaowings.teastory.creativetab.CreativeTabsLoader;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelBakery;
@@ -26,12 +27,17 @@ public class ItemLoader
     public static Item broken_tea = new TSItem("broken_tea", 64);
     public static Item matcha = new TSItem("matcha", 64);
     public static Item mortar_and_pestle = new TSItem("mortar_and_pestle", 64);
+    public static Item black_tea_leaf = new TSItem("black_tea_leaf", 64);
+    public static Item matcha_leaf = new TSItem("matcha_leaf", 64);
     public static Item unactivated_enchanted_book = new UnactivatedEnchantedBook();
     public static Item dirty_sieve =new DirtySieve();
     public static ItemFood hot_water = new HotWater();
     public static ItemSoup green_tea = new GreenTea();
     public static ItemSoup burnt_green_tea = new BurntGreenTea();
     public static ItemSoup matcha_drink = new MatchaDrink();
+    public static ItemSoup black_tea = new BlackTea();
+    public static Item tea_residue = new TeaResidue();
+    public static Item tea_seeds = new TeaSeeds();
 
     public ItemLoader(FMLPreInitializationEvent event)
     {
@@ -47,9 +53,17 @@ public class ItemLoader
         register(broken_tea);
         register(matcha);
         register(mortar_and_pestle);
-        register(unactivated_enchanted_book);
+        register(black_tea_leaf);
+        register(matcha_leaf);
+        register(tea_seeds);
         register(burnt_green_tea);
         register(matcha_drink);
+        register(black_tea);
+        register(tea_residue);
+    }
+    
+    public static void preInit() {
+        ModelBakery.addVariantName(tea_residue, "teastory:tea_residue_green", "teastory:tea_residue_black");
     }
     
     @SideOnly(Side.CLIENT)
@@ -67,9 +81,14 @@ public class ItemLoader
         registerRender(broken_tea);
         registerRender(matcha);
         registerRender(mortar_and_pestle);
-        registerRender(unactivated_enchanted_book);
+        registerRender(black_tea_leaf);
+        registerRender(matcha_leaf);
+        registerRender(tea_seeds);
         registerRender(burnt_green_tea);
         registerRender(matcha_drink);
+        registerRender(black_tea);
+        registerRender(tea_residue, 0, "tea_residue_green");
+        registerRender(tea_residue, 1, "tea_residue_black");
     }
 
     private static void register(Item item)
@@ -82,6 +101,13 @@ public class ItemLoader
     {
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0,
                 new ModelResourceLocation(TeaStory.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+    }
+    
+    @SideOnly(Side.CLIENT)
+    private static void registerRender(Item item, int meta, String file)
+    {
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, meta,
+                new ModelResourceLocation(TeaStory.MODID + ":" + file, "inventory"));
     }
 }
 

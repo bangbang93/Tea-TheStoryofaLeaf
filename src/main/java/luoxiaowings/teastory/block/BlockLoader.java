@@ -2,6 +2,7 @@ package luoxiaowings.teastory.block;
 
 import luoxiaowings.teastory.TeaStory;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockCrops;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BlockModelShapes;
 import net.minecraft.client.renderer.block.statemap.StateMap;
@@ -18,26 +19,37 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockLoader
 {
-    public static Block dustpan = new Dustpan();
-    public static Block dustpan_full = new DustpanFull();
-    public static Block dustpan_dried = new DustpanDried();
-    public static Block dustpan_wet = new DustpanWet();
+    public static Block teapan = new Teapan();
+    public static Block barrel = new Barrel();
+    public static BlockCrops teaplant = new Teaplant();
 
     public BlockLoader(FMLPreInitializationEvent event)
     {
-        register(dustpan, "dustpan");
-        register(dustpan_full, "dustpan_full");
-        register(dustpan_dried, "dustpan_dried");
-        register(dustpan_wet, "dustpan_wet");
+        GameRegistry.registerBlock(teapan, ItemBlockMeta.class, "teapan");
+        GameRegistry.registerBlock(barrel, ItemBlockMeta.class, "barrel");
+        register(teaplant, "teaplant");
+    }
+    
+    public static void preInit()
+    {
+    	ModelBakery.addVariantName(Item.getItemFromBlock(BlockLoader.teapan), "teastory:teapan_empty", "teastory:teapan_full", "teastory:teapan_dried", "teastory:teapan_matcha", "teastory:teapan_wet");
+    	ModelBakery.addVariantName(Item.getItemFromBlock(BlockLoader.barrel), "teastory:barrel_empty", "teastory:barrel_full", "teastory:barrel_full2", "teastory:barrel_fermentation", "teastory:barrel_blacktea");
     }
 
     @SideOnly(Side.CLIENT)
     public static void registerRenders()
     {
-        registerRender(dustpan, "dustpan");
-        registerRender(dustpan_full, "dustpan_full");
-        registerRender(dustpan_dried, "dustpan_dried");
-        registerRender(dustpan_wet, "dustpan_wet");
+    	registerRender(barrel, 0, "barrel_empty");
+        registerRender(barrel, 1, "barrel_full");
+        registerRender(barrel, 2, "barrel_full2");
+        registerRender(barrel, 3, "barrel_fermentation");
+        registerRender(barrel, 4, "barrel_blacktea");
+        registerRender(teapan, 0, "teapan_empty");
+        registerRender(teapan, 1, "teapan_full");
+        registerRender(teapan, 2, "teapan_dried");
+        registerRender(teapan, 3, "teapan_matcha");
+        registerRender(teapan, 4, "teapan_wet");
+        registerRender(teaplant, "teaplant");
 	}
     
     private static void register(Block block, String name)
@@ -49,5 +61,11 @@ public class BlockLoader
     private static void registerRender(Block block, String name)
     {
         Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), 0, new ModelResourceLocation(TeaStory.MODID + ":" + name, "inventory"));
+    }
+    
+    @SideOnly(Side.CLIENT)
+    private static void registerRender(Block block, int meta, String name)
+    {
+        Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(Item.getItemFromBlock(block), meta, new ModelResourceLocation(TeaStory.MODID + ":" + name, "inventory"));
     }
 }

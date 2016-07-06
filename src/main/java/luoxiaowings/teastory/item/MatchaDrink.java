@@ -25,8 +25,9 @@ public class MatchaDrink extends ItemSoup
     {
         if(!world.isRemote)
         {
-        	entityplayer.addPotionEffect(new PotionEffect(Potion.absorption.id, Math.max(0, ConfigLoader.greentea_absorptionTime), Math.max(0, ConfigLoader.greentea_absorptionTier))); 
-            entityplayer.addPotionEffect(new PotionEffect(Potion.resistance.id, Math.max(0, ConfigLoader.greentea_resistanceTime), Math.max(0, ConfigLoader.greentea_resistanceTier))); 
+        	entityplayer.addPotionEffect(new PotionEffect(Potion.resistance.id, Math.max(0, ConfigLoader.matcha_Time), 1)); 
+            entityplayer.addPotionEffect(new PotionEffect(Potion.digSpeed.id, Math.max(0, ConfigLoader.matcha_Time), 1));
+            entityplayer.addPotionEffect(new PotionEffect(Potion.jump.id, Math.max(0, ConfigLoader.matcha_Time)/2, 0));
         }
     }
     
